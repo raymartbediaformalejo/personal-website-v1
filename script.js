@@ -26,3 +26,13 @@ const oberver = new IntersectionObserver(stickyNav, {
 });
 
 oberver.observe(sectionHeroEl);
+
+const mobileNavlinks = document.querySelectorAll(`.main-nav-link`);
+
+mobileNavlinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    if (link.classList.contains("main-nav-link")) {
+      headerel.classList.toggle("nav-open");
+    }
+  });
+});
